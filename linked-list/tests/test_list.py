@@ -43,15 +43,6 @@ def test_includes_True():
     expected = True
     assert actual == expected
 
-def test_includes_False():
-    class_input = LinkedList()
-    class_input.insert(3)
-    class_input.inserlinked-list-insertionst(2)
-    class_input.insert(6)
-    class_input.insert(30)
-    actual = class_input.includes(110)
-    expected = False
-    assert actual == expected
 
 def test_return_aclass_input_value():
     class_input =LinkedList()
