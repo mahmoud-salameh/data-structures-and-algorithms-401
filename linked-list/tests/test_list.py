@@ -80,7 +80,9 @@ def test_add_node_end():
     actual = class_input.__str__()
     expected='( 2 ) -> ( 1 ) -> ( 5 ) -> NULL'
     assert actual==expected
+
 class_input = LinkedList()
+
 def test_insert_node_before_middle():
     class_input = LinkedList()
     class_input.append(1)
