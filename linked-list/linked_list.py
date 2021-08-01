@@ -6,7 +6,6 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
-
     def insert(self, value='null'):
         node = Node(value)
         if not self.head:
@@ -15,10 +14,8 @@ class LinkedList:
             current = self.head
             self.head= node
             self.head.next=current
-
     def includes(self,num):
         input=False
-
         current = self.head
         while current:
             if current.value == num:
@@ -26,8 +23,6 @@ class LinkedList:
                 break
             current=current.next
         return input
-
-
     def __str__(self):
         output = ""
         current = self.head
