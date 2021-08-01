@@ -7,6 +7,7 @@ def test_instantiate_empty_linked_list():
     expected=''
     assert actual==expected
 
+
 def test_insert():
     class_input = LinkedList()
     class_input.insert("My Name Is Mahmoud")
@@ -45,7 +46,7 @@ def test_includes_True():
 def test_includes_False():
     class_input = LinkedList()
     class_input.insert(3)
-    class_input.insert(2)
+    class_input.inserlinked-list-insertionst(2)
     class_input.insert(6)
     class_input.insert(30)
     actual = class_input.includes(110)
