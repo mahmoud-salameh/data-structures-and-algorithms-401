@@ -37,9 +37,9 @@ class LinkedList:
 
 if __name__ == "__main__":
     class_input =LinkedList()
-    new.insert(3)
-    new.insert('and')
-    new.insert(2)
-    new.insert(1)
-    actual = new.__str__()
-    print(new.__str__())
+    class_input.insert(3)
+    class_input.insert('and')
+    class_input.insert(2)
+    class_input.insert(1)
+    actual = class_input.__str__()
+    print(class_input.__str__())
