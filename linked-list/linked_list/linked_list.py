@@ -34,11 +34,42 @@ class LinkedList:
             output += f"( {value} ) -> "
             current=current.next
         return output
+    def append(self, value='null'):
+          class_node = Node(value)
+          if not self.head:
+              self.head = class_node          
+          else:
+              current = self.head
+              while current.next != None:
+                  current = current.next
+              current.next = class_node
+    def insertBefore(self ,value, newVal):
+        current = self.head
+        if current.value==value:
+            self.insert(newVal)
+        else:
+          while current:
+
+             if current.next.value==value :            
+                Inpout_value=current.next
+                current.next=Node(newVal)
+                current.next.next=Inpout_value     
+                break
+             current=current.next
+    def insertAfter(self, value, newVal):
+        current = self.head
+        while current:
+            if current.value==value :
+                Inpout_value=current.next
+                current.next=Node(newVal)
+                current.next.next=Inpout_value                
+                break
+            current=current.next
 
 if __name__ == "__main__":
     class_input =LinkedList()
+    class_input.insert(4)
     class_input.insert(3)
-    class_input.insert('and')
     class_input.insert(2)
     class_input.insert(1)
     actual = class_input.__str__()
