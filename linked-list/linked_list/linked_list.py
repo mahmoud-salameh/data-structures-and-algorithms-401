@@ -67,6 +67,24 @@ class LinkedList:
                 break
             current=current.next
 
+    def kth_From_End(self, k):
+        if type(k) != type(5):
+            return 'Please enter a number in the input'
+        if k < 0:
+            return "Can't enter a negative number in the input"
+        list_input = []
+        current = self.head
+        while current:
+            list_input += [current.value]
+            
+            current = current.next
+        if k == 0:
+            return list_input[-1]
+        else:
+            if k >= len(list_input):
+                return 'Exception'
+            return list_input[(k*-1)-1]
+
 if __name__ == "__main__":
     class_input =LinkedList()
     class_input.insert(4)
