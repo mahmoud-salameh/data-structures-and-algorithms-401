@@ -24,6 +24,30 @@
 <!-- Description of the challenge -->
 Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
+## code challenge-6
+
+__**Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.**__
+
+**Write tests to prove the following functionality:**
+
+* Can successfully add a node to the end of the linked list
+* Can successfully add multiple nodes to the end of a linked list
+* Can successfully insert a node before a node located i the middle of a linked list
+* Can successfully insert a node before the first node of a linked list
+* Can successfully insert after a node in the middle of the linked list
+* Can successfully insert a node after the last node of the linked list
+
+## code challenge-7 
+
+__**Write tests for the following scenarios, and any other cases that help you ensure your code is working as expected.**__
+
+* Where k is greater than the length of the linked list
+* Where k and the length of the list are the same
+* Where k is not a positive integer
+* Where the linked list is of a size 1
+* “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+
 <!-- ## Approach & Efficiency
 What approach did you take? Why? What is the Big O space/time for this approach?
 
