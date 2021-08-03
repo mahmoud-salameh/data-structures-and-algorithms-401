@@ -65,6 +65,7 @@ function called zipLists which takes two linked lists as arguments. Zip the two 
 create function take two input as linked list, cheack if the linked list is empty, declare empty list called valuelist, create while loop while one of linked list Node not None, while looping check each one of the node not equal none if it is true appen to the new list, after loop break return the list of the value in str call x
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+    
     in list-1 [6] -> [4] -> [2]-> Null
     list-2  [5] -> [3] -> [1]-> Null
 
