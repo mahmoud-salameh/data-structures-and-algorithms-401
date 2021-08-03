@@ -1,5 +1,9 @@
-from linked_list import __version__
-from linked_list.linked_list import (Node, LinkedList,)
+
+from linked_list.linked_list import (Node, LinkedList)
+
+
+from linked_list.linked_list import zipLists
+
 
 def test_instantiate_empty_linked_list():
     class_input = LinkedList()
@@ -154,3 +158,29 @@ def test_k_happy_path():
     actual = class_input.kth_From_End(3)
     expected = 3
     assert actual == expected
+
+def test_happy_path():
+    list_input1 = LinkedList()
+    list_input1.append(6)
+    list_input1.append(4)
+    list_input1.append(2)
+    list_input2 = LinkedList()
+    list_input2.append(5)
+    list_input2.append(3)
+    list_input2.append(1)
+    actual=zipLists(list_input1, list_input2)
+    expected='( 6 ) -> ( 5 ) -> ( 4 ) -> ( 3 ) -> ( 2 ) -> ( 1 ) -> NULL'
+    assert actual==expected
+
+def test_edge_case():
+    list_input1 = LinkedList()
+    list_input1.append(1)
+    list_input1.append(6)
+    list_input1.append(12)
+    list_input2 = LinkedList()
+    list_input2.append(3)
+    list_input2.append(9)
+    actual=zipLists(list_input1, list_input2)
+    expected='( 1 ) -> ( 3 ) -> ( 6 ) -> ( 9 ) -> ( 12 ) -> NULL'
+    assert actual==expected
+
