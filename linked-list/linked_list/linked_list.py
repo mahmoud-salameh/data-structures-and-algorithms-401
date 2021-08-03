@@ -85,6 +85,34 @@ class LinkedList:
                 return 'Exception'
             return list_input[(k*-1)-1]
 
+
+    
+def zipLists(list_input1, list_input2):
+    list1 = list_input1.head
+    list2 = list_input2.head
+
+    if list1 == None or list2 == None:
+        if list1:
+            return list_input1.__str__()
+        elif list2:
+            return list_input2.__str__()
+        else:
+         return "Both of the linked list is empty"
+
+    list_input = []
+    while list1 or list2:
+        if(list1):
+            list_input+=[list1.value]
+            list1 = list1.next
+        if(list2):
+            list_input+=[list2.value]
+            list2 = list2.next
+    output=''
+    for i in list_input:
+      output+=f'( {i} ) -> '
+    output+='NULL'
+    return output
+
 if __name__ == "__main__":
     class_input =LinkedList()
     class_input.insert(4)
