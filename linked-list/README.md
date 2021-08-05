@@ -46,6 +46,18 @@ __**Write tests for the following scenarios, and any other cases that help you e
 * Where k is not a positive integer
 * Where the linked list is of a size 1
 * “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+# Challenge Summary
+<!-- Description of the challenge -->
+Takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+## Whiteboard Process
+
+![x](linked-list/linked_list_KthFromEnd.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
 
 
 <!-- ## Approach & Efficiency

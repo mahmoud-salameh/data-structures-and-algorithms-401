@@ -30,3 +30,9 @@ What approach did you take? Why? What is the Big O space/time for this approach?
 
 ## API
 Description of each method publicly available to your Linked List -->
+# Challenge Summary
+<!-- Description of the challenge -->
+Takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+## Whiteboard Process
+
+![x](linked-list/linked_list_KthFromEnd.png)
