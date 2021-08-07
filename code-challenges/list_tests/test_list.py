@@ -1,8 +1,6 @@
 
-from linked_list.linked_list import (Node, LinkedList)
+from linked_list.linked_list import (Node, LinkedList, zipLists)
 
-
-from linked_list.linked_list import zipLists
 
 
 def test_instantiate_empty_linked_list():
