@@ -95,3 +95,13 @@ create function take two input as linked list, cheack if the linked list is empt
         list_input=[1,2,3,4]
         *3 while Null #break
     out =( 1 ) -> ( 2 ) -> ( 3 ) -> ( 4 ) -> Null
+
+# Code Challenge - 10
+# Stacks and Queues
+<!-- Short summary or background information -->
+Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
+## Challenge
+<!-- Description of the challenge -->
+-Create a Stack class that has a top property. It creates an empty Stack when instantiated. 
+-Create a Queue class that has a front property. It creates an empty Queue when instantiated. 
+

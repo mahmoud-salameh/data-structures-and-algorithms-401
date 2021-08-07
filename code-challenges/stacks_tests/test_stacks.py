@@ -1,0 +1,85 @@
+from stack_and_queue.stack_and_queue import *
+import pytest
+
+
+def test_push(stack_input):
+    actual = stack_input.top.value
+    expected = "N"
+    assert actual == expected
+
+def test_pop(stack_input):
+    actual = stack_input.pop()
+    expected = "N"
+    assert actual == expected
+    assert stack_input.top.value == 9
+
+def test_is_empty_true(stack_input):
+    stack_input.pop()
+    stack_input.pop()
+    stack_input.pop()
+    assert stack_input.isEmpty() == True
+
+def test_peek_stack(stack_input):
+    actual = stack_input.peek()
+    expected = "N"
+    assert actual == expected
+    assert stack_input.top.value == "N"
+
+def test_is_empty_stack(stack_input):
+    assert stack_input.isEmpty() == False
+
+def test_stack_exception(stack_input):
+    stack_input.pop()
+    stack_input.pop()
+    stack_input.pop()
+    assert stack_input.pop()=="An empty stack"
+    assert stack_input.peek()=="An empty stack"
+
+@pytest.fixture
+def stack_input():
+    stack = Stack()
+    stack.push(-4)
+    stack.push(9)
+    stack.push("N")
+    return stack
+
+""" ------------------------------------------------------------------------------------------------------ """
+
+def test_enqueue(queue_input):
+    assert queue_input.rear.value == 7
+    assert queue_input.front.value == 9
+
+def test_dequeue(queue_input):
+    data = queue_input.dequeue()
+    assert data == 9
+    assert queue_input.front.value == "Mahmoud"
+
+def test_peek_queue(queue_input):
+    assert queue_input.peek()==9
+
+def test_is_empty_true(queue_input):
+    data = queue_input.dequeue()
+    data = queue_input.dequeue()
+    data = queue_input.dequeue()
+    data = queue_input.dequeue()
+    assert queue_input.isEmpty()==True
+
+def test_queue_exception(queue_input):
+    queue_input.dequeue()
+    queue_input.dequeue()
+    queue_input.dequeue()
+    queue_input.dequeue()
+    assert queue_input.dequeue()=="An empty Queue"
+    assert queue_input.peek()=="An empty Queue"
+
+def test_is_empty_Queue(queue_input):
+    assert queue_input.isEmpty()==False
+
+@pytest.fixture
+def queue_input():
+    queue = Queue()
+    queue.enqueue(9)
+    queue.enqueue("Mahmoud")
+    queue.enqueue(-4)
+    queue.enqueue(7)
+    return queue
