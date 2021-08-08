@@ -90,12 +90,6 @@ def queue_input():
 """ ---------------------------------------------stack-queue-pseudo tests---------------------------------------------------- """
 
 
-
-def test_enqueue_happypath(queue_vals):
-    actual = queue_vals.__str__()
-    expected = '( 9 ) -> ( mahmoud ) -> ( -4 ) -> ( 7 )'
-    assert actual == expected
-
 def test_enqueue_Expected_failure(queue_vals):
     actual = queue_vals.__str__()
     expected = '( 9 ) -> ( mahmoud ) -> ( -4 )'
@@ -107,12 +101,6 @@ def test_enqueue_edge_case():
     expected = 'Please put a value'
     assert actual == expected
 
-def test_dequeue_happypath(queue_vals):
-    dequeue_value=queue_vals.dequeue()
-    actual = queue_vals.__str__()
-    expected = '( 9 ) -> ( mahmoud ) -> ( -4 )'
-    assert actual == expected
-    assert dequeue_value==7
 
 def test_dequeue_Expected_failure(queue_vals):
     dequeue_value=queue_vals.dequeue()
