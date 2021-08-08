@@ -121,14 +121,4 @@ class PseudoQueue:
         return dequeue_value
 
             
-    def __str__(self):
-        current=self.front.top
-        input = ''
-        while current:
-            if not current.next:
-                input=input+f'( {current.value} )'
-                current=current.next
-            else:
-                input=input+f'( {current.value} ) -> '
-                current=current.next
-        return input
+    
