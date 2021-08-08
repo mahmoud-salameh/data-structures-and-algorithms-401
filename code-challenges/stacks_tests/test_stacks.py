@@ -83,3 +83,56 @@ def queue_input():
     queue.enqueue(-4)
     queue.enqueue(7)
     return queue
+
+
+
+
+""" ---------------------------------------------stack-queue-pseudo tests---------------------------------------------------- """
+
+
+
+def test_enqueue_happypath(queue_vals):
+    actual = queue_vals.__str__()
+    expected = '( 9 ) -> ( mahmoud ) -> ( -4 ) -> ( 7 )'
+    assert actual == expected
+
+def test_enqueue_Expected_failure(queue_vals):
+    actual = queue_vals.__str__()
+    expected = '( 9 ) -> ( mahmoud ) -> ( -4 )'
+    assert actual != expected
+
+def test_enqueue_edge_case():
+    queue = PseudoQueue()
+    actual = queue.enqueue()
+    expected = 'Please put a value'
+    assert actual == expected
+
+def test_dequeue_happypath(queue_vals):
+    dequeue_value=queue_vals.dequeue()
+    actual = queue_vals.__str__()
+    expected = '( 9 ) -> ( mahmoud ) -> ( -4 )'
+    assert actual == expected
+    assert dequeue_value==7
+
+def test_dequeue_Expected_failure(queue_vals):
+    dequeue_value=queue_vals.dequeue()
+    actual = queue_vals.__str__()
+    expected = '( 9 ) -> ( mahmoud ) -> ( -4 ) -> ( 7 )'
+    assert actual != expected
+    assert dequeue_value != -4
+
+def test_dequeue_edge_case():
+    queue = PseudoQueue()
+    actual = queue.dequeue()
+    expected = 'The Queue is empty'
+    assert actual == expected
+
+
+@pytest.fixture
+def queue_vals():
+    queue = PseudoQueue()
+    queue.enqueue(7)
+    queue.enqueue(-4)
+    queue.enqueue("mahmoud")
+    queue.enqueue(9)
+    return queue

@@ -6,7 +6,7 @@ class Node:
 class Stack:
     def __init__(self):
         self.top = None
-    
+
     def push(self,value):
         node = Node(value)
         node.next = self.top
@@ -38,11 +38,9 @@ class Queue:
     def enqueue(self, value):
         node  =  Node(value)
         if not self.front:
-
             self.front  =  node
             self.rear  =  node
         else:
-
             self.rear.next  =  node
             self.rear  =  node
     
@@ -57,7 +55,6 @@ class Queue:
     def peek(self):
         try:
            return self.front.value
-    
         except :
             return "An empty Queue"
 
@@ -65,19 +62,73 @@ class Queue:
         return self.front  ==  None
         
 
+""" ---------------------------------------------stack-queue-pseudo tests---------------------------------------------------- """
+    
+class Stack:
+    def __init__(self):
+        self.top = None
+    
+    def push(self,value):
+        node = Node(value)
+        node.next=self.top
+        self.top=node
 
+    def pop(self):
+        try:
+           popValue = self.top.value
+           self.top = self.top.next
+           return popValue
+        except:
+            return 'An empty stack'
 
-if __name__  ==  "__main__":
+    def peek(self):
+        try:
+            return self.top.value
+        except:
+            return 'An empty stack'
 
-    stack  =  Stack()
-    stack.push(7)
-    stack.push(13)
-    stack.push(7)
-    print(stack.pop())
+    def isEmpty(self):
+        return self.top == None
 
-    queue  =  Queue()
-    queue.enqueue(8)
-    queue.enqueue(2)
-    queue.enqueue(7)
-    queue.enqueue("Mahmoud")
-    print(queue.peek())
+class PseudoQueue:
+    def __init__(self):
+        self.front = Stack()
+        self.rear = Stack()
+    
+    def enqueue(self,value=None):
+        if value == None:
+            return 'Please put a value'
+    
+        self.front.push(value)
+        
+    def dequeue(self):
+        
+        if not self.front.top:
+            return 'The Queue is empty'
+           
+        while self.front.top:
+            
+       
+            self.rear.push(self.front.pop())
+
+        dequeue_value = self.rear.pop()
+
+        while self.rear.top:
+        
+    
+            self.front.push(self.rear.pop())
+
+        return dequeue_value
+
+            
+    def __str__(self):
+        current=self.front.top
+        input = ''
+        while current:
+            if not current.next:
+                input=input+f'( {current.value} )'
+                current=current.next
+            else:
+                input=input+f'( {current.value} ) -> '
+                current=current.next
+        return input
