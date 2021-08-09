@@ -45,44 +45,44 @@ def stack_input():
 
 """ ------------------------------------------------------------------------------------------------------ """
 
-def test_enqueue(queue_input):
-    assert queue_input.rear.value == 7
-    assert queue_input.front.value == 9
+# def test_enqueue(queue_input):
+#     assert queue_input.rear.value == 7
+#     assert queue_input.front.value == 9
 
-def test_dequeue(queue_input):
-    data = queue_input.dequeue()
-    assert data == 9
-    assert queue_input.front.value == "Mahmoud"
+# def test_dequeue(queue_input):
+#     data = queue_input.dequeue()
+#     assert data == 9
+#     assert queue_input.front.value == "Mahmoud"
 
-def test_peek_queue(queue_input):
-    assert queue_input.peek()==9
+# def test_peek_queue(queue_input):
+#     assert queue_input.peek()==9
 
-def test_is_empty_true(queue_input):
-    data = queue_input.dequeue()
-    data = queue_input.dequeue()
-    data = queue_input.dequeue()
-    data = queue_input.dequeue()
-    assert queue_input.isEmpty()==True
+# def test_is_empty_true(queue_input):
+#     data = queue_input.dequeue()
+#     data = queue_input.dequeue()
+#     data = queue_input.dequeue()
+#     data = queue_input.dequeue()
+#     assert queue_input.isEmpty()==True
 
-def test_queue_exception(queue_input):
-    queue_input.dequeue()
-    queue_input.dequeue()
-    queue_input.dequeue()
-    queue_input.dequeue()
-    assert queue_input.dequeue()=="An empty Queue"
-    assert queue_input.peek()=="An empty Queue"
+# def test_queue_exception(queue_input):
+#     queue_input.dequeue()
+#     queue_input.dequeue()
+#     queue_input.dequeue()
+#     queue_input.dequeue()
+#     assert queue_input.dequeue()=="An empty Queue"
+#     assert queue_input.peek()=="An empty Queue"
 
-def test_is_empty_Queue(queue_input):
-    assert queue_input.isEmpty()==False
+# def test_is_empty_Queue(queue_input):
+#     assert queue_input.isEmpty()==False
 
-@pytest.fixture
-def queue_input():
-    queue = Queue()
-    queue.enqueue(9)
-    queue.enqueue("Mahmoud")
-    queue.enqueue(-4)
-    queue.enqueue(7)
-    return queue
+# @pytest.fixture
+# def queue_input():
+#     queue = Queue()
+#     queue.enqueue(9)
+#     queue.enqueue("Mahmoud")
+#     queue.enqueue(-4)
+#     queue.enqueue(7)
+#     return queue
 
 
 
@@ -124,3 +124,54 @@ def queue_vals():
     queue.enqueue("mahmoud")
     queue.enqueue(9)
     return queue
+
+""" ---------------------------------------------stack-queue-animal-shelter-tests---------------------------------------------------- """
+
+def test_return_cat_name(que_val):
+    actual = que_val.dequeue('cat')
+    expected = 'nimnim'
+    assert actual == expected
+
+def test_Expected_failure_return_wrong_dog_name(que_val):
+    actual = que_val.dequeue('dog')
+    expected = 'bimbus'
+    assert actual != expected
+
+def test_Not_Cat_Or_Dog_return_None(que_val):
+    actual = que_val.dequeue('empty')
+    expected = None
+    assert actual == expected
+
+
+@pytest.fixture
+def que_val():
+    dj = Dog('toast')
+    mika = Dog('mika')
+    bimbus = Dog('bimbus')
+    nimnim = Cat('nimnim')
+    mimi = Cat('mimi')
+    mshmsh = Cat('mshmsh')
+    animal_shelter = Animal_shelter()
+    animal_shelter.enqueue(dj)
+    animal_shelter.enqueue(mika)
+    animal_shelter.enqueue(bimbus)
+    animal_shelter.enqueue(nimnim)
+    animal_shelter.enqueue(mimi)
+    animal_shelter.enqueue(mshmsh)
+    return animal_shelter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
