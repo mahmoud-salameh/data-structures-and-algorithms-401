@@ -186,4 +186,12 @@ class Animal_shelter:
             return self.dog.dequeue().name
         else:
             return None
+
+
+
+
+
+
+
+
     

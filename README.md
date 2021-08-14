@@ -96,4 +96,31 @@ dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then
 Big O :
 
 * time : O(n)
+
 * space : O(n)
+
+
+
+
+
+
+# code challenge -13
+
+## Challenge Summary
+<!-- Description of the challenge -->
+write a function that  should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are  balanced.
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](code-challenges/challenge13.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+create a function called the_paren_balanced, check if is balance = true, check if the length of the string is balanced, check if the stack is empty if it's empty return false, if the stack is balanced and not empty return true, then create a new function to check if the paren is matching  and put in it to argu a1 an a2 and if a1 = a2 in each case return true if not return false
+
+Big O:
+time ---> O(n)
+space ---> O(n)
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+after testing at in vs and running the code it's working 
+
