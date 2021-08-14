@@ -78,7 +78,7 @@ Big O :
             * pref can be either "dog" or "cat"
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![](code-challenges/challenge-12.png)
+![](code-challenges/challenge-12-2.png)
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 enqueue
@@ -86,8 +86,8 @@ enqueue
 enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
 
 Big O :
-* time : O(1)
-* space : O(1)
+* time : O(n)
+* space : O(n)
 
 dequeue
 
@@ -96,7 +96,9 @@ dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then
 Big O :
 
 * time : O(n)
-* space : O(1)
+
+* space : O(n)
+
 
 
 
