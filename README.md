@@ -124,3 +124,33 @@ space ---> O(n)
 
 after testing at in vs and running the code it's working 
 
+
+# code challenge -16
+## Challenge Summary
+<!-- Description of the challenge -->
+Find the maximum value stored in the tree.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](code-challenges/challenge-16.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Create method called max_in_tree and declare variable max = 0 Create function call traversal take a node as argument inside it it will check if there is left node and check if there is right node inside  every check i will call the function again and check if the value of the  node more than the max value if it is the value of the node will be the new max value, for first time we will call the function with the root, at end check if the value of the root more than max if it is the max will be the root value.
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+input = tree in the visualization
+Expected output = 23
+
+self.max=0
+traverse(Node(3))
+
+if Node(4): True
+ traverse(Node(4))
+...
+if Node(11): True
+   traverse(Node(11))
+...
+
+if 3 > 23 #False
+
+return 23
