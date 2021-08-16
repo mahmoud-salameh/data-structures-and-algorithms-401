@@ -75,7 +75,25 @@ class BinaryTree:
             return self.root.data
         return self.max
        
-       
+    def breadth_first(tree):
+        in_queue = [tree.root]
+        breadth = []
+        if not tree.root:
+            return []
+    
+        while in_queue:
+
+            node = in_queue[0]
+            if node.left != None:
+                in_queue += [node.left]
+                
+            if node.right != None:
+                in_queue += [node.right]
+
+            breadth += [in_queue[0].data]
+            in_queue = in_queue[1:]
+        return breadth
+
        
        
         #                  3
@@ -95,6 +113,4 @@ if __name__ == "__main__":
     tree.root.left.right = Node(13)
     tree.root.left.right.right = Node(23)
     tree.root.right.right = Node(19)
-    print(tree.in_order_print())
-    print(tree.list_in_tree)
-    print(tree.max_in_tree())
+    print(tree.breadth_first())
