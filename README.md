@@ -154,3 +154,42 @@ if Node(11): True
 if 3 > 23 #False
 
 return 23
+
+
+
+
+# code challenge -17
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a function called breadth first that take an Arguments: tree and then Return: list of all values in the tree, in the order they were encountered
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](code-challenges/challenge-17.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Create function called breadth_first
+declare to list in_queue =[tree.root], breadth=[]
+check if the tree is empty if it is return []
+create while while queue != None
+while looping let the node = queue[0]
+check if there is left and right if it is add it to the queue add the value of queue[0] to breadth
+remove the first index from queue
+after the loop break return breadth list
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+input = tree in the pic
+Expected output = [3, 4, 11, 1, 13, 19, 23]
+
+queue = [Node(3)]
+breadth=[]
+
+if Node(4) != None: True
+ queue += [Node(4)]
+if Node(11) != None: True
+     queue += [Node(11)]
+breadth+=[1]
+queue=[Node(4),Node(11)]
+...
+
+return [3, 4, 11, 1, 13, 19, 23]
+
