@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.left = None
         self.right = None
-
+        
 class BinaryTree:
     def __init__(self):
         self.root = None
@@ -93,7 +93,38 @@ class BinaryTree:
             breadth += [in_queue[0].data]
             in_queue = in_queue[1:]
         return breadth
+    
 
+
+class k_Ary:
+   def fizz_buzz_tree(self, kAryTree):
+      result = []
+      for i in range(1, kAryTree +1):
+         if i% 3== 0 and i%5==0:
+            result.append("FizzBuzz")
+         elif i %3==0:
+            result.append("Fizz")
+         elif i% 5 == 0:
+            result.append("Buzz")
+         else:
+            result.append(str(i))
+      return result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ob1 = k_Ary()
+# print(ob1.fizz_buzz_tree(100))
        
        
         #                  3
@@ -104,13 +135,13 @@ class BinaryTree:
         #                 \     
         #                  23  
 
-if __name__ == "__main__":
-    tree = BinaryTree()
-    tree.root = Node(3)
-    tree.root.left = Node(4)
-    tree.root.right = Node(11)
-    tree.root.left.left = Node(1)
-    tree.root.left.right = Node(13)
-    tree.root.left.right.right = Node(23)
-    tree.root.right.right = Node(19)
-    print(tree.breadth_first())
+# if __name__ == "__main__":
+#     tree = BinaryTree()
+#     tree.root = Node(3)
+#     tree.root.left = Node(4)
+#     tree.root.right = Node(11)
+#     tree.root.left.left = Node(1)
+#     tree.root.left.right = Node(13)
+#     tree.root.left.right.right = Node(23)
+#     tree.root.right.right = Node(19)
+#     print(tree.breadth_first())

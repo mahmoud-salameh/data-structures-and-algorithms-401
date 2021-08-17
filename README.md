@@ -193,3 +193,27 @@ queue=[Node(4),Node(11)]
 
 return [3, 4, 11, 1, 13, 19, 23]
 
+
+# code challenge -18
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a function called fizz buzz tree that takes an Arguments: k-ary tree and Return: new k-ary tree
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](code-challenges/challenge-18.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+1-Ceate function called fizz_buzz_tree take
+kary_Tree as arg
+2- create inside it another function called
+traverse take node ass arg
+3- check if the mode has children if it is
+4- loop around the children call the function
+again and put the children as arg
+5- do all fizz buzz checks inside the loop and
+change the value for the mode it it is true
+6- if the value don't  match the fizzbuzz condition return the same value
+7- if the condition is true return the fizz or buzz or fizz-buzz
+8- retuen the the result
+
