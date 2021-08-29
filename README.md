@@ -217,3 +217,10 @@ change the value for the mode it it is true
 7- if the condition is true return the fizz or buzz or fizz-buzz
 8- retuen the the result
 
+
+
+# code challenge-26 readme path:
+
+[challenge-26-README](code-challenges/insertions/README.md)  
+
+[tests path](code-challenges/list_tests/test_insertion_sort.py)
