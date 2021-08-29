@@ -2,23 +2,21 @@ from trees.fizz_buzz import *
 import pytest
 
 def test_fizz(prepared_kAryTree):
-        for i in [3, 6, 9, 18]:
-            print('testing', i)
-            assert prepared_kAryTree.root.result[2].result[1].value!='fizz'
+    fizz_buzz_tree(prepared_kAryTree)
+    assert prepared_kAryTree.root.result != 'buzz'
 
 def test_buzz(prepared_kAryTree):
-    for i in [5, 10, 50]:
-        print('testing', i)
-        assert prepared_kAryTree.root.result[2].result[1].value!='buzz'
+    fizz_buzz_tree(prepared_kAryTree)
+    assert prepared_kAryTree.root.result[0].result != 'fizz'
 
 def test_tree_fizz_buzz_happy_path(prepared_kAryTree):
     fizz_buzz_tree(prepared_kAryTree)
-    assert prepared_kAryTree.root.result[2].result[1].result[2].value=='Fizz Buzz'
+    assert prepared_kAryTree.root.result[2].result[1].result[2].value == 'Fizz Buzz'
 
 
 def test_tree_fizz_buzz_Case(prepared_kAryTree):
     fizz_buzz_tree(prepared_kAryTree)
-    assert type(prepared_kAryTree.root.value) ==type('string') 
+    assert type(prepared_kAryTree.root.value) == type('string') 
 
 
 @pytest.fixture
