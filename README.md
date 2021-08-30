@@ -224,3 +224,10 @@ change the value for the mode it it is true
 [challenge-26-README](code-challenges/insertions/README.md)  
 
 [tests path](code-challenges/list_tests/test_insertion_sort.py)
+
+
+# code challenge-27 readme path:
+
+[challenge-26-README](code-challenges/merge_sort/merge_sort/README.md)
+
+[test path](code-challenges/merge_sort/merge_sort/tests/test_merge_sort.py)
