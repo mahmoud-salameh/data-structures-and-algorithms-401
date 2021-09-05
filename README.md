@@ -231,3 +231,15 @@ change the value for the mode it it is true
 [challenge-26-README](code-challenges/merge_sort/merge_sort/README.md)
 
 [test path](code-challenges/merge_sort/merge_sort/tests/test_merge_sort.py)
+
+# code challenge-30 readme path:
+
+[challenge-30-README](code-challenges/hash-table/hash_table/README.md)
+
+[test path](code-challenges/hash-table/hash_table/tests/test_hash_table.py)
+
+# code challenge-30 readme path:
+
+[challenge-31-README](code-challenges/repeated-word/repeated_word/README.md)
+
+[test path](code-challenges/repeated-word/repeated_word/tests/test_repeated_word.py)
