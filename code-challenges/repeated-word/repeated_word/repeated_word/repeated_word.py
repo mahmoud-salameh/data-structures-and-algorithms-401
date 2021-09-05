@@ -1,3 +1,4 @@
+import re
 class Node:
   def __init__(self, value):
     self.value = value
@@ -99,3 +100,26 @@ class Hashtable:
             if current.value[0] == key:
                 return current.value[1]
             current = current.next
+
+
+def repeated_word(string = None):
+    if not string:
+        return 'the string is empty'
+    hash_table = Hashtable(1024)
+    string = string.lower()
+    string = re.sub(r'[^\w]', ' ', string)
+    string = re.split( '\s',string)
+    for word in string:
+
+        if hash_table.contains(word):
+            return word
+        else:
+
+            hash_table.add(word, True)
+    return 'no repetetion in the string'
+
+# if __name__ == "__main__":
+
+#     string="It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."
+
+#     print(repeated_word(string))
