@@ -237,3 +237,9 @@ change the value for the mode it it is true
 [challenge-30-README](code-challenges/hash-table/hash_table/README.md)
 
 [test path](code-challenges/hash-table/hash_table/tests/test_hash_table.py)
+
+# code challenge-30 readme path:
+
+[challenge-31-README](code-challenges/repeated-word/repeated_word/README.md)
+
+[test path](code-challenges/repeated-word/repeated_word/tests/test_repeated_word.py)
