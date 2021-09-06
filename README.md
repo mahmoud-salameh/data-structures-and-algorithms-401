@@ -243,3 +243,9 @@ change the value for the mode it it is true
 [challenge-31-README](code-challenges/repeated-word/repeated_word/README.md)
 
 [test path](code-challenges/repeated-word/repeated_word/tests/test_repeated_word.py)
+
+# code challenge-30 readme path:
+
+[challenge-32-README](code-challenges/hashmap-tree-intersection/hashmap_tree_intersection/README.md)
+
+[test path](code-challenges/hashmap-tree-intersection/hashmap_tree_intersection/tests/test_hashmap_tree_intersection.py)
