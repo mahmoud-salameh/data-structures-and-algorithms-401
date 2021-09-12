@@ -83,89 +83,35 @@ class Graph:
 #   def BreadthFirst(self,vertix, action=lambda x: print(x)):
    
     # ALGORITHM BreadthFirst(vertex)
+    # DECLARE nodes <-- new List()
+    # DECLARE breadth <-- new Queue()
+    # DECLARE visited <-- new Set()
+    # breadth.Enqueue(vertex)
+    # visited.Add(vertex)
+    # while (breadth is not empty)
+    #     DECLARE front <-- breadth.Dequeue()
+    #     nodes.Add(front) # call action here
+    #     for each child in front.Children
+    #         if(child is not visited)
+    #             visited.Add(child)
+    #             breadth.Enqueue(child)   
+    # return nodes;
   def BreadthFirst(self, vertex):
     """ 
     Performs a level order traversal of the graph and calls action at each node
     """
     if vertex not in self._adjacency_list:
         return 'This node is not in the graph'
-    # DECLARE nodes <-- new List()
         nodes = new_list()
-    # DECLARE breadth <-- new Queue()
         breadth = new_queue()
-    # DECLARE visited <-- new Set()
         visited = new_set()
-    # breadth.Enqueue(vertex)
         breadth.enqueue(vertex)
-    # visited.Add(vertex)
         visited.add(vertex)
-    # while (breadth is not empty)
         while breadth:
-    #     DECLARE front <-- breadth.Dequeue()
             front = breadth.dequeue()
-    #     nodes.Add(front) # call action here
             nodes.append(front)
-    #     for each child in front.Children
         for child in front.Children:
-    #         if(child is not visited)
             if child not in visited:
-    #             visited.Add(child)
                 visited.add(child)
-    #             breadth.Enqueue(child)   
                 breadth.enqueue(child)
-    # return nodes;
         return nodes
-
-
-if __name__ == '__main__':
-
-    graph = Graph()
-    a = graph.add_vertex('a')
-    b = graph.add_vertex('b')
-    c = graph.add_vertex('c')
-    d = graph.add_vertex('d')
-    e = graph.add_vertex('e')
-    f = graph.add_vertex('f')
-    graph.add_edge(a, c)
-    graph.add_edge(a, d)
-    graph.add_edge(b, c)
-    graph.add_edge(b, f)
-    graph.add_edge(c, a)
-    graph.add_edge(c, b)
-    graph.add_edge(c, e)
-    graph.add_edge(d, a)
-    graph.add_edge(d, e)
-    graph.add_edge(e, c)
-    graph.add_edge(e, d)
-    graph.add_edge(e, f)
-    graph.add_edge(f, b)
-    graph.add_edge(f, e)
-    # print(graph.get_nodes())
-
-    graph2 = Graph()
-
-    pandora= graph2.add_vertex('pandora')
-    arendelle= graph2.add_vertex('arendelle')
-    metroville= graph2.add_vertex('metroville')
-    narina= graph2.add_vertex('narina')
-    naboo= graph2.add_vertex('naboo')
-    manstropolis= graph2.add_vertex('manstropolis')
-
-    graph2.add_edge(pandora,arendelle)
-    graph2.add_edge(arendelle,pandora)
-    graph2.add_edge(arendelle,metroville)
-    graph2.add_edge(arendelle,metroville)
-    graph2.add_edge(metroville,arendelle)
-    graph2.add_edge(metroville,manstropolis)
-    graph2.add_edge(metroville,naboo)
-    graph2.add_edge(metroville,narina)
-    graph2.add_edge(narina,metroville)
-    graph2.add_edge(narina,naboo)
-    graph2.add_edge(naboo,narina)
-    graph2.add_edge(naboo,metroville)
-    graph2.add_edge(naboo,manstropolis)
-    graph2.add_edge(manstropolis,naboo)
-    graph2.add_edge(manstropolis,arendelle)
-    graph2.add_edge(manstropolis,metroville)
-
-    print(graph2.BreadthFirst(pandora))
