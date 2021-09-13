@@ -78,7 +78,7 @@ class Graph:
         return None
   
   def size(self):
-    return self._adajacency_list
+    return len(self._adajacency_list)
   
 #   def BreadthFirst(self,vertix, action=lambda x: print(x)):
    
